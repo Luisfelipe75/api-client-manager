@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
-from app.services.innovasoft_interest import list_interests
-from app.deps.auth import get_current_user
+from services.innovasoft_interest import list_interests
+from deps.auth import get_current_user
 
 router = APIRouter()
 

@@ -1,17 +1,17 @@
 from fastapi import APIRouter, Depends, HTTPException
-from app.deps.auth import get_current_user
-from app.db.mongo import get_db
-from app.schemas.client import ClientCreate, ClientUpdate
-from app.services.innovasoft_client import (
+from deps.auth import get_current_user
+from db.mongo import get_db
+from schemas.client import ClientCreate, ClientUpdate
+from services.innovasoft_client import (
     list_clients,
     get_client,
     create_client,
     update_client,
     delete_client,
 )
-from app.repositories.operation_repo import log_operation
-from app.utils.files import encode_image_to_base64
-from app.utils.responses import success_response, error_response
+from repositories.operation_repo import log_operation
+from utils.files import encode_image_to_base64
+from utils.responses import success_response, error_response
 
 router = APIRouter()
 

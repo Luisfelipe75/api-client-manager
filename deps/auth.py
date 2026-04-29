@@ -1,7 +1,7 @@
 from fastapi import Depends, HTTPException, status, Request
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from app.db.mongo import get_db
-from app.repositories.session_repo import get_session_by_token
+from db.mongo import get_db
+from repositories.session_repo import get_session_by_token
 
 bearer_scheme = HTTPBearer(auto_error=False)
 

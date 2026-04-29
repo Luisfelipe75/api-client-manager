@@ -1,5 +1,5 @@
 from datetime import datetime, timezone
-from app.db.collections import CollectionNames
+from db.collections import CollectionNames
 
 async def create_session(db, token: str, userid: str, username: str):
     doc = {

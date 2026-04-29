@@ -1,13 +1,13 @@
 from fastapi import APIRouter, Depends
-from app.db.mongo import get_db
-from app.services.innovasoft_auth import login_remote, register_remote
-from app.repositories.session_repo import create_session, delete_session
-from app.deps.auth import get_current_user
-from app.repositories.operation_repo import log_operation
-from app.schemas.auth import LoginRequest, RegisterRequest
-from app.utils.validators import validate_password_strength
-from app.utils.responses import success_response, error_response
-from app.core.logging import logger
+from db.mongo import get_db
+from services.innovasoft_auth import login_remote, register_remote
+from repositories.session_repo import create_session, delete_session
+from deps.auth import get_current_user
+from repositories.operation_repo import log_operation
+from schemas.auth import LoginRequest, RegisterRequest
+from utils.validators import validate_password_strength
+from utils.responses import success_response, error_response
+from core.logging import logger
 
 router = APIRouter()
 

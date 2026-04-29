@@ -1,5 +1,5 @@
 import httpx
-from app.core.config import settings
+from core.config import settings
 
 async def list_interests(token: str):
     headers = {"Authorization": f"Bearer {token}"}

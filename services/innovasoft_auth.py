@@ -1,5 +1,5 @@
 import httpx
-from app.core.config import settings
+from core.config import settings
 
 async def login_remote(username: str, password: str):
     async with httpx.AsyncClient(base_url=settings.api_base_url, timeout=30) as client:

@@ -1,5 +1,5 @@
 import httpx
-from app.core.config import settings
+from core.config import settings
 
 async def list_clients(token: str, payload: dict):
     headers = {"Authorization": f"Bearer {token}"}

@@ -1,10 +1,10 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.core.config import settings
-from app.db.mongo import connect_mongo, close_mongo
-from app.api.router import api_router
-from app.core.logging import logger
+from core.config import settings
+from db.mongo import connect_mongo, close_mongo
+from api.router import api_router
+from core.logging import logger
 import os
 
 @asynccontextmanager
@@ -36,4 +36,3 @@ if __name__ == "__main__":
     import uvicorn
     port = int(os.getenv("PORT", 8000))
     uvicorn.run(app, host="0.0.0.0", port=port)
-

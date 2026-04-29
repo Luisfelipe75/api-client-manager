@@ -1,5 +1,5 @@
 from datetime import datetime, timezone
-from app.db.collections import CollectionNames
+from db.collections import CollectionNames
 
 async def log_operation(db, accion: str, usuario: str, cliente_id: str, resultado: int):
     await db[CollectionNames.OPERACIONES].insert_one({
